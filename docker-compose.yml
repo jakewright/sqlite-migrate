@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  migrate:
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - ./migrations:/migrations
+    environment:
+      DATABASE: ./database.db
